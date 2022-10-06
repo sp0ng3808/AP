@@ -4,7 +4,8 @@ using namespace std;
 
 int input, jumlahBarang;
 float totalBayar, totalBayarBuku, totalBayarPensil, totalBayarPnghps, totalBayarSpidol;
-string ulangi;
+char ulangi;
+
 int harga[5] = 
 {
         0,
@@ -29,7 +30,6 @@ int main()
         for (int  no = 0; no < 5; no++)
         {
                 if (no == 0) continue;
-
                 if (input != 0)
                 {
                         if (no == input) continue;
@@ -52,16 +52,22 @@ int main()
 
                 cout << "Apakah ada yang masih ingin dibeli ? [Y/n]: ";
                 cin >> ulangi;
-                
-                if (ulangi == "y" || ulangi == "Y")
+
+                switch (ulangi)
                 {
-                        goto ulangi1;
-                        return totalBayarBuku;
-                        return input;
-                } 
-                else if (ulangi == "n" || ulangi == "N")
-                {
-                        goto selesai;
+                        case 'y':
+                        case  'Y':
+                                goto ulangi1;
+                                return totalBayarBuku;
+                                return input;
+                                break;
+                        
+                        case 'n':
+                        case  'N':
+                                goto selesai;
+                                break;
+                        default:
+                                break;
                 }
                 break;
         
@@ -73,16 +79,22 @@ int main()
 
                 cout << "Apakah ada yang masih ingin dibeli ? [Y/n]: ";
                 cin >> ulangi;
-                
-                if (ulangi == "y" || ulangi == "Y")
+
+                switch (ulangi)
                 {
-                        goto ulangi1;
-                        return totalBayarPensil;
-                        return input;
-                } 
-                else if (ulangi == "n" || ulangi == "N")
-                {
-                        goto selesai;
+                        case 'y':
+                        case  'Y':
+                                goto ulangi1;
+                                return totalBayarPensil;
+                                return input;
+                                break;
+                        
+                        case 'n':
+                        case  'N':
+                                goto selesai;
+                                break;
+                        default:
+                                break;
                 }
                 break;
         case 3:
@@ -93,16 +105,22 @@ int main()
 
                 cout << "Apakah ada yang masih ingin dibeli ? [Y/n]: ";
                 cin >> ulangi;
-                
-                if (ulangi == "y" || ulangi == "Y")
+
+                switch (ulangi)
                 {
-                        goto ulangi1;
-                        return totalBayarPnghps;
-                        return input;
-                } 
-                else if (ulangi == "n" || ulangi == "N")
-                {
-                        goto selesai;
+                        case 'y':
+                        case  'Y':
+                                goto ulangi1;
+                                return totalBayarPnghps;
+                                return input;
+                                break;
+                        
+                        case 'n':
+                        case  'N':
+                                goto selesai;
+                                break;
+                        default:
+                                break;
                 }
                 break;
         case 4:
@@ -114,15 +132,21 @@ int main()
                 cout << "Apakah ada yang masih ingin dibeli ? [Y/n]: ";
                 cin >> ulangi;
                 
-                if (ulangi == "y" || ulangi == "Y")
+                switch (ulangi)
                 {
-                        goto ulangi1;
-                        return totalBayarSpidol;
-                        return input;
-                } 
-                else if (ulangi == "n" || ulangi == "N")
-                {
-                        goto selesai;
+                        case 'y':
+                        case  'Y':
+                                goto ulangi1;
+                                return totalBayarSpidol;
+                                return input;
+                                break;
+                        
+                        case 'n':
+                        case  'N':
+                                goto selesai;
+                                break;
+                        default:
+                                break;
                 }
                 break;
         default:
