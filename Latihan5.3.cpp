@@ -26,7 +26,7 @@ void inputUkuran() {
         cin >> ukuran;
 }
 
-void repeat(void* label) {
+void repeat(string label) {
         char repeat;
         cout << "Ulangi [Y/n] ? ";
         cin >> repeat;
@@ -35,20 +35,22 @@ void repeat(void* label) {
         {
         case 'y':
         case 'Y':
-                goto *label;
+                system(label);
                 break;
         
+        case 'n':
+        case 'N':
+                exit(0);
+                break;
         default:
                 break;
         }
         
 }
 
-int main()
+
+int main(int argc, char const *argv[])
 {       
-        void *target;
-        ulangi:
-        target = &&ulangi;
         system("clear");
         cout << "Masukan Kode [1/3/5]: ";
         cin >> kode;
@@ -63,19 +65,19 @@ int main()
                 case 'S':
                         output += "Merk Baju " + merk[0][0][0] + "\n";
                         output += "Harga Baju " + merk[0][1][0] + "\n";
-                        repeat(target);
+                        repeat(argv[0]);
                         break;
                 case 'm':
                 case 'M':
                         output += "Merk Baju " + merk[0][0][0] + "\n";
                         output += "Harga Baju " + merk[0][1][1] + "\n";
-                        repeat(target);
+                        repeat(argv[0]);
                         break;
                 
                 default:
                         output += "Merk Baju " + merk[0][0][0] + "\n";
                         output += "Harga Baju " + merk[0][1][2] + "\n";
-                        repeat(target);
+                        repeat(argv[0]);
                         break;
                 }
                 break;
@@ -88,19 +90,19 @@ int main()
                 case 'S':
                         output += "Merk Baju " + merk[1][0][0] + "\n";
                         output += "Harga Baju " + merk[1][1][0] + "\n";
-                        repeat(target);
+                        repeat(argv[0]);
                         break;
                 case 'm':
                 case 'M':
                         output += "Merk Baju " + merk[1][0][0] + "\n";
                         output += "Harga Baju " + merk[1][1][0] + "\n";
-                        repeat(target);
+                        repeat(argv[0]);
                         break;
                 
                 default:
                         output += "Merk Baju " + merk[1][0][0] + "\n";
                         output += "Harga Baju " + merk[1][1][0] + "\n";
-                        repeat(target);
+                        repeat(argv[0]);
                         break;
                 }
                 break;
@@ -112,19 +114,19 @@ int main()
                 case 'S':
                         output += "Merk Baju " + merk[2][0][0] + "\n";
                         output += "Harga Baju " + merk[2][1][0] + "\n";
-                        repeat(target);
+                        repeat(argv[0]);
                         break;
                 case 'm':
                 case 'M':
                         output += "Merk Baju " + merk[2][0][0] + "\n";
                         output += "Harga Baju " + merk[2][1][0] + "\n";
-                        repeat(target);
+                        repeat(argv[0]);
                         break;
                 
                 default:
                         output += "Merk Baju " + merk[1][0][0] + "\n";
                         output += "Harga Baju " + merk[2][1][1] + "\n";
-                        repeat(target);
+                        repeat(argv[0]);
                         break;
                 }
                 break;
