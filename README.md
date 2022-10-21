@@ -1,1 +1,1 @@
-# Latihan Algoritma Pemrogramman
+# Latihan C++
